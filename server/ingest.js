@@ -33,7 +33,7 @@ const Profile = require('./models/profile');
             const { id, age, name, image, bio } = profile;
             return {
                 updateOne: {
-                    filter: { id: profile.id },
+                    filter: { id },
                     update: { $set: { id, age, name, image, bio } },
                     upsert: true
                 }
